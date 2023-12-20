@@ -1,19 +1,53 @@
 package lesson2;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+// написать программу для вывода названия поры года по номерам месяца
+
 public class seasonOfTheYear {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.println("Hello and welcome!");
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        int numberofthemonth=1;
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        switch (numberofthemonth){
+            case 1:
+                System.out.println("winter");
+                break;
+            case 2:
+                System.out.println("winter");
+                break;
+            case 3:
+                System.out.println("spring");
+                break;
+            case 4:
+                System.out.println("spring");
+                break;
+            case 5:
+                System.out.println("spring");
+                break;
+            case 6:
+                System.out.println("summer");
+                break;
+            case 7:
+                System.out.println("summer");
+                break;
+            case 8:
+                System.out.println("summer");
+                break;
+            case 9:
+                System.out.println("autumn");
+                break;
+            case 10:
+                System.out.println("autumn");
+                break;
+            case 11:
+                System.out.println("autumn");
+                break;
+            case 12:
+                System.out.println("winter");
+                break;
+            default:
+                System.out.println("wrong number");
+                break;
         }
+
     }
 }
