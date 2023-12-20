@@ -6,7 +6,7 @@ public class max_min_arr {
         int min = mas[0];
         int max = mas[0];
 
-        for (int i = 0; i <mas.length ; i++) {
+        for (int i = 1; i <mas.length ; i++) {
             if (mas[i]<min){
                 min=mas[i];
             }
