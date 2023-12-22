@@ -7,37 +7,37 @@ public class else_if_seasonOfTheYear {
         if (numberofthemonth == 1) {
             System.out.println("winter");
         }
-        if (numberofthemonth == 2) {
+        else if (numberofthemonth == 2) {
             System.out.println("winter");
         }
-        if (numberofthemonth == 3) {
+        else if (numberofthemonth == 3) {
             System.out.println("spring");
         }
-        if (numberofthemonth == 4) {
+        else if (numberofthemonth == 4) {
             System.out.println("spring");
         }
-        if (numberofthemonth == 5) {
+        else if (numberofthemonth == 5) {
             System.out.println("spring");
         }
-        if (numberofthemonth == 6) {
+        else if (numberofthemonth == 6) {
             System.out.println("summer");
         }
-        if (numberofthemonth == 7) {
+        else if (numberofthemonth == 7) {
             System.out.println("summer");
         }
-        if (numberofthemonth == 8) {
+        else if (numberofthemonth == 8) {
             System.out.println("summer");
         }
-        if (numberofthemonth == 9) {
+        else if (numberofthemonth == 9) {
             System.out.println("autumn");
         }
-        if (numberofthemonth == 10) {
+        else if (numberofthemonth == 10) {
             System.out.println("autumn");
         }
-        if (numberofthemonth == 11) {
+        else if (numberofthemonth == 11) {
             System.out.println("autumn");
         }
-        if (numberofthemonth == 12) {
+        else if (numberofthemonth == 12) {
             System.out.println("winter");
         } else {
             System.out.println("wrong number");
