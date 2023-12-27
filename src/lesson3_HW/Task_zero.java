@@ -1,4 +1,5 @@
 package lesson3_HW;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -17,9 +18,9 @@ public class Task_zero {
                 System.out.println("your number is included in array");
                 System.out.println("index is " + index);
             }
-            }
-
         }
 
     }
+
+}
 
