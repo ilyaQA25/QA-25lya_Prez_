@@ -6,9 +6,9 @@ public class TemperatureOutside {
 
         if (temperature>-5){
             System.out.println("warm");
-        }if (temperature<=-5 && temperature>=-20){
+        }else if (temperature<=-5 && temperature>=-20){
             System.out.println("normal temperature");
-        }if ( temperature<=-20){
+        }else if ( temperature<=-20){
             System.out.println("cold");
 
         }
