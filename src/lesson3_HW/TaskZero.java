@@ -1,10 +1,8 @@
 package lesson3_HW;
 
-import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
-public class Task_zero {
+public class TaskZero {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter your number: ");
@@ -14,9 +12,8 @@ public class Task_zero {
 
         for (int i = 0; i < mas.length; i++) {
             if (mas[i] == userNumber) {
-                int index = i;
+
                 System.out.println("your number is included in array");
-                System.out.println("index is " + index);
             }
         }
 
