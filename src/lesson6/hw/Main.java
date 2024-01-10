@@ -19,12 +19,5 @@ public class Main {
         System.out.println(card3.fullInfo());
 
 
-
-       /* CreditCard[] list = new CreditCard[3];
-        for (int i = 0; i < list.length; i++) {
-            list[i]=new CreditCard((int)(Math.random()*12), (int)(Math.random()*12));
-
-        }
-        System.out.println(Arrays.deepToString(list));*/
     }
 }
