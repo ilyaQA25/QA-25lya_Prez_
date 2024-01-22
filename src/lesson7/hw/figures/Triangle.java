@@ -3,11 +3,11 @@ package lesson7.hw.figures;
 class Triangle extends Figures {
 
 
-    private Double sideA;
-    private Double sideB;
+    private final Double sideA;
+    private final Double sideB;
 
 
-    private Double sideC;
+    private final Double sideC;
     private Double perimetr;
     private Double height;
     private Double halfPerimetr;
