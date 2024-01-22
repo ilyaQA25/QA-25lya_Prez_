@@ -1,12 +1,18 @@
 package lesson7.hw.figures;
 
-class Square extends Figures {
+class Square extends Rectangle {
+
+
+
+    private final Double sideA;
+
 
     public Square(Double sideA) {
+        super(sideA, sideA);
         this.sideA = sideA;
+
     }
 
-    private Double sideA;
 
     @Override
     protected Double getPerim() {

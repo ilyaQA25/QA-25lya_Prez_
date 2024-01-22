@@ -3,18 +3,19 @@ package lesson7.hw.figures;
 
 class Rectangle extends Figures {
 
-    private Double sideA;
-    private Double sideB;
-
-    private Double perimetr;
-
-    private Double square;
+    private final Double sideA;
+    private final Double sideB;
 
 
     public Rectangle(Double sideA, Double sideB) {
         this.sideA = sideA;
         this.sideB = sideB;
     }
+
+
+//    public Rectangle(Double sideA) {
+//        this.sideA = sideA;
+//    }
 
     @Override
     protected Double getPerim() {
@@ -28,17 +29,7 @@ class Rectangle extends Figures {
         return square;
     }
 
-   /* Integer getSqareRectangle(Integer sideA, Integer sideB){
-        Integer sqareRectangle = (sideA)*(sideB);
 
-        return sqareRectangle;
-    }
-
-    Integer getPerimetr(Integer sideA, Integer sideB){
-        Integer perimRectangle = (sideA*2)+(sideB*2);
-        return perimRectangle;
-    }
-*/
 
 
 }
