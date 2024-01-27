@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Strings strings = new Strings();
 
-        String value = "5554-abc-5678-eDc-1a2b";
+        String value = "5554-abc-5678-eDc-1a2b  ";
 
         System.out.println(strings.task1(value));
         System.out.println(strings.task2(value));
