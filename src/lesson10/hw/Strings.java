@@ -113,7 +113,7 @@ public class Strings {
             System.out.println("string ended with 1a2b");
         }
 
-        return value;
+        return value +"";
     }
 
 
