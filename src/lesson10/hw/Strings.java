@@ -105,7 +105,7 @@ public class Strings {
             System.out.println("string start with 555");
         }
 
-        return value;
+        return value+"/";
     }
 
     public String task7(String value) {
