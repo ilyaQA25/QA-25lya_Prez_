@@ -1,7 +1,7 @@
 package lesson9.hw.main;
 
-import lesson9.hw.contractEmploye.ContractEmploye;
-import lesson9.hw.contractGoods.ContractGoods;
+import lesson9.hw.contract_employe.ContractEmploye;
+import lesson9.hw.contract_goods.ContractGoods;
 import lesson9.hw.exeptions.AlphNumSeqExeption;
 import lesson9.hw.exeptions.AlphSeqExeption;
 import lesson9.hw.exeptions.NumrSeqExeption;
@@ -16,9 +16,9 @@ public class Main {
 
         Registr registr1 = new Registr();
 
-        ContractEmploye contractEmploye1 = new ContractEmploye("abc23", new Date(2000 / 12 / 12), new Date(2000 / 9 / 9), "Nikita");
+        ContractEmploye contractEmploye1 = new ContractEmploye("abc231a2b", new Date(2000 / 12 / 12), new Date(2000 / 9 / 9), "Nikita");
 
-        Finance finance = new Finance(123, new Date(2012/01/23), "5abc55asdfa", 228);
+        Finance finance = new Finance("wrwerabc1a2b",1000, new Date(2000/12/12),1488123);
         ContractGoods contractGoods1 = new ContractGoods("wer2341a2b", "Pencil", 3453, new Date(2009 / 12 / 12));
 
         registr1.saveDoc(finance);
@@ -31,26 +31,12 @@ public class Main {
             System.out.println("Not contains");
         }*/
 
-        AlphSeqExeption alphSeqExeption = new AlphSeqExeption();
-        try {
-            alphSeqExeption.methodException(contractEmploye1, contractGoods1, finance);
-        }catch (AlphSeqExeption alphSeqExeption1){
-            System.out.println("not contains");
-        }
         AlphNumSeqExeption alphNumSeqExeption = new AlphNumSeqExeption();
         try {
-            alphNumSeqExeption.methodExeption(contractEmploye1,contractGoods1,finance);
+            alphNumSeqExeption.methodExeption(contractEmploye1);
         }catch (AlphNumSeqExeption alphNumSeqExeption1){
-            System.out.println("not end");
+            System.out.println("not ended");
         }
-
-        NumrSeqExeption numrSeqExeption = new NumrSeqExeption();
-        try {
-            numrSeqExeption.methodExeption(contractEmploye1,contractGoods1,finance);
-        }catch (NumrSeqExeption numrSeqExeption1){
-            System.out.println("not start with");
-        }
-
 
         System.out.println(registr1.infoDoc(finance));
         System.out.println(registr1.infoDoc(contractEmploye1));
