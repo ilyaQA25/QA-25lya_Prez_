@@ -1,17 +1,19 @@
 package lesson9.hw.exeptions;
 
-import lesson9.hw.contractEmploye.ContractEmploye;
-import lesson9.hw.contractGoods.ContractGoods;
+import lesson9.hw.contract_employe.ContractEmploye;
+import lesson9.hw.contract_goods.ContractGoods;
+import lesson9.hw.documents.Documents;
 import lesson9.hw.finance.Finance;
 
-public class NumrSeqExeption extends IllegalArgumentException{
-    public NumrSeqExeption(){
+public class NumrSeqExeption extends IllegalArgumentException {
+    public NumrSeqExeption() {
         super();
     }
-    public void methodExeption(ContractEmploye employee, ContractGoods goods, Finance finance){
-                if (!employee.docNumber.startsWith("555")||!goods.docNumber.startsWith("555")||finance.docNumber.startsWith("555")){
-                    throw new NumrSeqExeption();
-                }
+
+    public void methodExeption(Documents documents1) {
+        if (!documents1.getDocNumber().startsWith("555")) {
+            throw new NumrSeqExeption();
+        }
     }
 
 }
