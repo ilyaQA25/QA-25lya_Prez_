@@ -1,8 +1,6 @@
 package lesson10.hw;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 
 public class Strings {
 
@@ -10,110 +8,108 @@ public class Strings {
     public String task1(String value) {
         String firstPart = null;
         String secondPart = null;
-        var array = value.split("-");
+        String[] array = value.split("-");
 
-        for (int i = 0; i < array.length; i++) {
-            firstPart = array[0];
-            secondPart = array[2];
-        }
+
+        firstPart = array[0];
+        secondPart = array[2];
+
         return firstPart + secondPart;
     }
 
     public String task2(String value) {
+
+
         String firstPart = null;
         String secondPart = null;
         String thirdPart = null;
         String fourthPart = null;
         String fivePart = null;
-        var array = value.split("-");
-
-        for (int i = 0; i < array.length; i++) {
-            firstPart = array[0];
-            secondPart = array[1];
-            thirdPart = array[2];
-            fourthPart = array[3];
-            fivePart = array[4];
-        }
-
-        char b = '*';
-        var newval1 = secondPart.toCharArray();
-        for (int i = 0; i < newval1.length; i++) {
-            newval1[i] = b;
-        }
+        String[] array = value.split("-");
 
 
-        System.out.println();
-        char a = '*';
-        var newval2 = fourthPart.toCharArray();
-        for (int i = 0; i < newval2.length; i++) {
-            newval2[i] = a;
+        firstPart = array[0];
+        secondPart = array[1];
+        thirdPart = array[2];
+        fourthPart = array[3];
+        fivePart = array[4];
 
-        }
 
-        return firstPart + "-" +
-                Arrays.toString(newval1).replace("[", "").replace("]", "").replace(",", "").replace(" ", "")
-                + "-" + thirdPart + "-" + Arrays.toString(newval2).replace("[", "").replace("]", "").replace(",", "").replace(" ", "") + "-" + fivePart;
+        //String value = "5554-abc-5678-eDc-1a2b";
+        StringBuffer strBuffer = new StringBuffer(secondPart);
+        strBuffer.replace(0, 3, "***");
+
+        StringBuffer strBuffer1 = new StringBuffer(fourthPart);
+        strBuffer1.replace(0, 3, "***");
+
+
+        return firstPart + "-" + strBuffer + "-" + thirdPart + "-" + strBuffer1 + "-" + fivePart;
 
     }
-
 
     public String task3(String value) {
         String firstPart = null;
         String secondPart = null;
         String thirdPart = null;
-        var array = value.split("-");
+        String[] array = value.split("-");
 
-        for (int i = 0; i < array.length; i++) {
-            firstPart = array[1];
-            secondPart = array[3];
-            thirdPart = array[4];
-        }
+
+        firstPart = array[1];
+        secondPart = array[3];
+        thirdPart = array[4];
+
 
         char a = ' ';
         char b = ' ';
-        var newval = thirdPart.toCharArray();
-        System.out.println(Arrays.toString(newval));
-        for (int i = 0; i < newval.length; i++) {
-            a = newval[1];
-            b = newval[3];
+        char[] newval = thirdPart.toCharArray();
+        /*System.out.println(Arrays.toString(newval));*/
+        a = newval[1];
+        b = newval[3];
 
-        }
+        //String value = "5554-abc-5678-eDc-1a2b";
         // cпросить, почему записи a = newval[1] и запись newval[1]=а не одно и тоже!
 
-        return firstPart.toLowerCase() + "/" + secondPart.toLowerCase() + "/" + a + "/" + b;
+        return firstPart.toLowerCase() + "/" + secondPart.toLowerCase() + "/" + String.valueOf(a).toLowerCase() + "/" + String.valueOf(b).toLowerCase();
         //как привести последние элементы к lowerCase хз ваще
     }
 
     public String task4(String value) {
-        StringBuilder value1 = new StringBuilder(value);
-        var array = value1.delete(0, 5).delete(3, 8).delete(8, 9).delete(9, 10);
-        return array.toString().toUpperCase();
+        /*StringBuilder value1 = new StringBuilder(value);
+        StringBuilder[] array = new StringBuilder[]{value1.delete(0, 5).delete(3, 8).delete(8, 9).delete(9, 10)};
+        return Arrays.deepToString(array).toUpperCase();*/
+
+        String firstPart = null;
+        String secondPart = null;
+        String thirdPart = null;
+        String[] array = value.split("-");
+
+
+        firstPart = array[1];
+        secondPart = array[3];
+        thirdPart = array[4];
+
+        StringBuilder val1 = new StringBuilder(firstPart);
+        StringBuilder val2 = new StringBuilder(secondPart);
+        StringBuilder val3 = new StringBuilder(thirdPart);
+        val3.setCharAt(0, '/');
+        val3.setCharAt(2, '/');
+
+        return "Letters:" + val1.toString().toUpperCase() + "/" + val2.toString().toUpperCase() + val3.toString().toUpperCase();
     }
 
 
-    public String task5(String value) {
-        if (value.contains("abc") || value.contains("ABC")) {
-            System.out.println("abc is contained");
-        }
-
-        return value;
+    public boolean task5(String value) {
+        return value.toLowerCase().contains("abc");
 
     }
 
-    public String task6(String value) {
-        if (value.startsWith("555")) {
-            System.out.println("string start with 555");
-        }
-
-        return value+"/";
+    public boolean task6(String value) {
+        return value.startsWith("555");
     }
 
-    public String task7(String value) {
-        if (value.endsWith("1a2b")) {
-            System.out.println("string ended with 1a2b");
-        }
+    public boolean task7(String value) {
+        return value.endsWith("1a2b");
 
-        return value +"";
     }
 
 
