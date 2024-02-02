@@ -16,7 +16,7 @@ public class Main {
 
         Registr registr1 = new Registr();
 
-        ContractEmploye contractEmploye1 = new ContractEmploye("abc231a2b", new Date(2000 / 12 / 12), new Date(2000 / 9 / 9), "Nikita");
+        ContractEmploye contractEmploye1 = new ContractEmploye("ac231a2", new Date(2000 / 12 / 12), new Date(2000 / 9 / 9), "Nikita");
 
         Finance finance = new Finance("wrwerabc1a2b",1000, new Date(2000/12/12),1488123);
         ContractGoods contractGoods1 = new ContractGoods("wer2341a2b", "Pencil", 3453, new Date(2009 / 12 / 12));
@@ -36,6 +36,12 @@ public class Main {
             alphNumSeqExeption.methodExeption(contractEmploye1);
         }catch (AlphNumSeqExeption alphNumSeqExeption1){
             System.out.println("not ended");
+        }
+        AlphSeqExeption alphSeqExeption = new AlphSeqExeption();
+        try {
+            alphSeqExeption.methodException(contractEmploye1);
+        }catch (AlphSeqExeption alphSeqExeption1) {
+            System.out.println("not started");
         }
 
         System.out.println(registr1.infoDoc(finance));
