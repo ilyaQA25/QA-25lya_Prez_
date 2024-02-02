@@ -5,28 +5,27 @@ import lesson9.hw.documents.Documents;
 import java.util.Date;
 
 public class Finance extends Documents {
-    Integer amountInMonth;
-    Date docDate;
-
-
-    Integer codeDepartment;
+    private Integer amountInMonth;
+    private Integer codeDepartment;
 
     public Finance(String docNumber, Integer amountInMonth, Date docDate, Integer codeDepartment) {
-        super(docNumber);
+        super(docNumber, docDate);
         this.amountInMonth = amountInMonth;
-        this.docDate = docDate;
         this.codeDepartment = codeDepartment;
     }
 
-    public Finance(String docNumber) {
-        super(docNumber);
+    public Finance(String docNumber, Date docDate) {
+        super(docNumber, docDate);
+    }
+
+    public Finance() {
     }
 
     @Override
     public String toString() {
         return "Finance{" +
                 "amountInMonth=" + amountInMonth +
-                ", docDate=" + docDate +
+                ", docDate=" + this.getDocDate() +
                 ", docNumber=" + this.getDocNumber() +
                 ", codeDepartment=" + codeDepartment +
                 '}';

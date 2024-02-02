@@ -6,22 +6,24 @@ import java.util.Date;
 
 public class ContractGoods extends Documents {
 
-    String typeOfGoods;
-    Integer quantityOfGoods;
-    Date docDate;
+    private String typeOfGoods;
+    private Integer quantityOfGoods;
+
 
 
     public ContractGoods(String docNumber, String typeOfGoods, Integer quantityOfGoods, Date docDate) {
-        super(docNumber);
+        super(docNumber, docDate);
         this.typeOfGoods = typeOfGoods;
         this.quantityOfGoods = quantityOfGoods;
-        this.docDate = docDate;
+
     }
 
-    public ContractGoods(String docNumber) {
-        super(docNumber);
+    public ContractGoods(String docNumber, Date docDate) {
+        super(docNumber, docDate);
     }
 
+    public ContractGoods() {
+    }
 
     @Override
     public String toString() {
@@ -29,7 +31,7 @@ public class ContractGoods extends Documents {
                 "docNumber=" + this.getDocNumber() +
                 ", typeOfGoods='" + typeOfGoods + '\'' +
                 ", quantityOfGoods=" + quantityOfGoods +
-                ", docDate=" + docDate +
+                ", docDate=" + this.getDocDate() +
                 '}';
     }
 
