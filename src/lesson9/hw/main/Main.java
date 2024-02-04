@@ -4,6 +4,7 @@ import lesson9.hw.contract_employe.ContractEmploye;
 import lesson9.hw.contract_goods.ContractGoods;
 import lesson9.hw.exeptions.AlphNumSeqExeption;
 import lesson9.hw.exeptions.AlphSeqExeption;
+import lesson9.hw.exeptions.DocumentInvalidException;
 import lesson9.hw.exeptions.NumrSeqExeption;
 import lesson9.hw.finance.Finance;
 import lesson9.hw.registr.Registr;
@@ -15,39 +16,14 @@ public class Main {
 
 
         Registr registr1 = new Registr();
+        Finance finance = new Finance("555abcwrwerabc1a2b", 1000, new Date(2000 / 12 / 12), 1488123);
 
-        ContractEmploye contractEmploye1 = new ContractEmploye("ac231a2", new Date(2000 / 12 / 12), new Date(2000 / 9 / 9), "Nikita");
 
-        Finance finance = new Finance("wrwerabc1a2b",1000, new Date(2000/12/12),1488123);
-        ContractGoods contractGoods1 = new ContractGoods("wer2341a2b", "Pencil", 3453, new Date(2009 / 12 / 12));
-
-        registr1.saveDoc(finance);
-        registr1.saveDoc(contractEmploye1);
-        registr1.saveDoc(contractGoods1);
-
-        /*try {
-            new AlphSeqExeption().methodException(contractEmploye.docNumber);
-        } catch (AlphSeqExeption alphSeqExeption) {
-            System.out.println("Not contains");
-        }*/
-
-        AlphNumSeqExeption alphNumSeqExeption = new AlphNumSeqExeption();
         try {
-            alphNumSeqExeption.methodExeption(contractEmploye1);
-        }catch (AlphNumSeqExeption alphNumSeqExeption1){
-            System.out.println("not ended");
+            registr1.saveDoc(finance);
+        } catch (DocumentInvalidException exception) {
+            System.out.println("exeption error");
         }
-        AlphSeqExeption alphSeqExeption = new AlphSeqExeption();
-        try {
-            alphSeqExeption.methodException(contractEmploye1);
-        }catch (AlphSeqExeption alphSeqExeption1) {
-            System.out.println("not started");
-        }
-
-        System.out.println(registr1.infoDoc(finance));
-        System.out.println(registr1.infoDoc(contractEmploye1));
-        System.out.println(registr1.infoDoc(contractGoods1));
-
 
 
     }
